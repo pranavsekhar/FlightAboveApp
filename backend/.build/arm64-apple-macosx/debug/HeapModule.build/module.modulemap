@@ -1,0 +1,4 @@
+module HeapModule {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/HeapModule.build/HeapModule-Swift.h"
+    requires objc
+}

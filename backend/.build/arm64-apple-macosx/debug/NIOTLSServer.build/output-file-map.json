@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOTLSServer.build/master.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/swift-nio-ssl/Sources/NIOTLSServer/main.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOTLSServer.build/main.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOTLSServer.build/main.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOTLSServer.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOTLSServer.build/main.swiftdeps"
+  }
+}

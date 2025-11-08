@@ -1,0 +1,4 @@
+module ServiceLifecycle {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/ServiceLifecycle.build/ServiceLifecycle-Swift.h"
+    requires objc
+}

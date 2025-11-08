@@ -1,0 +1,4 @@
+module NIOResumableUpload {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOResumableUpload.build/NIOResumableUpload-Swift.h"
+    requires objc
+}

@@ -1,0 +1,4 @@
+module FluentSQL {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentSQL.build/FluentSQL-Swift.h"
+    requires objc
+}

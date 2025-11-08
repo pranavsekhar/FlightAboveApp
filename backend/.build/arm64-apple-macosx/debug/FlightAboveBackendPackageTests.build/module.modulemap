@@ -1,0 +1,4 @@
+module FlightAboveBackendPackageTests {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FlightAboveBackendPackageTests.build/FlightAboveBackendPackageTests-Swift.h"
+    requires objc
+}

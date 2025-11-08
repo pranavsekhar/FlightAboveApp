@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/master.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmark+Codable.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Codable.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Codable.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Codable~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Codable.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmark+Enum.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Enum.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Enum.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Enum~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Enum.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmark+JSONPaths.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+JSONPaths.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+JSONPaths.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+JSONPaths~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+JSONPaths.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmark+Planets.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Planets.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Planets.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Planets~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Planets.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmark+Union.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Union.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Union.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Union~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Union.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmark+Upsert.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Upsert.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Upsert.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Upsert~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmark+Upsert.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/sql-kit/Sources/SQLKitBenchmark/SQLBenchmarker.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmarker.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmarker.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmarker~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/SQLKitBenchmark.build/SQLBenchmarker.swiftdeps"
+  }
+}

@@ -1,0 +1,4 @@
+module NIOHTTPResponsiveness {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/NIOHTTPResponsiveness.build/NIOHTTPResponsiveness-Swift.h"
+    requires objc
+}

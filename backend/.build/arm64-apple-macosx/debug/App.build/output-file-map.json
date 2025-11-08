@@ -1,0 +1,71 @@
+{
+  "": {
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/master.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Cache/InMemoryCache.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/InMemoryCache.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/InMemoryCache.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/InMemoryCache~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/InMemoryCache.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Clients/AeroAPIClient.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AeroAPIClient.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AeroAPIClient.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AeroAPIClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AeroAPIClient.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Clients/LookupClient.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/LookupClient.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/LookupClient.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/LookupClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/LookupClient.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Clients/OpenSkyClient.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/OpenSkyClient.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/OpenSkyClient.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/OpenSkyClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/OpenSkyClient.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Geo/Geo.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Geo.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Geo.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Geo~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Geo.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Models/AboveResponse.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AboveResponse.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AboveResponse.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AboveResponse~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/AboveResponse.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Models/FlightInfo.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/FlightInfo.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/FlightInfo.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/FlightInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/FlightInfo.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Models/StateVector.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/StateVector.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/StateVector.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/StateVector~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/StateVector.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/Routes.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Routes.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Routes.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Routes~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/Routes.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/configure.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/configure.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/configure.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/configure~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/configure.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/Sources/App/main.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/main.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/main.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/App.build/main.swiftdeps"
+  }
+}

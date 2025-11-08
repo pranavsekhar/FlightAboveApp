@@ -1,0 +1,281 @@
+{
+  "": {
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/master.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Exports.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Exports.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Exports.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Exports~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Exports.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/FluentBenchmarker.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FluentBenchmarker.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FluentBenchmarker.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FluentBenchmarker~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FluentBenchmarker.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/GalacticJurisdiction.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GalacticJurisdiction.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GalacticJurisdiction.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GalacticJurisdiction~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GalacticJurisdiction.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Galaxy.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Galaxy.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Galaxy.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Galaxy~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Galaxy.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Governor.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Governor.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Governor.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Governor~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Governor.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Jurisdiction.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Jurisdiction.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Jurisdiction.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Jurisdiction~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Jurisdiction.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Moon.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Moon.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Moon.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Moon~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Moon.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Planet.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Planet.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Planet.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Planet~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Planet.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/PlanetTag.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PlanetTag.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PlanetTag.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PlanetTag~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PlanetTag.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/SolarSystem.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SolarSystem.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SolarSystem.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SolarSystem~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SolarSystem.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Star.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Star.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Star.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Star~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Star.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/SolarSystem/Tag.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Tag.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Tag.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Tag~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/Tag.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/AggregateTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/AggregateTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/AggregateTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/AggregateTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/AggregateTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/ArrayTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ArrayTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ArrayTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ArrayTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ArrayTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/BatchTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/BatchTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/BatchTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/BatchTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/BatchTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/CRUDTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CRUDTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CRUDTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CRUDTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CRUDTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/ChildTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/ChildrenTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildrenTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildrenTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildrenTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChildrenTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/ChunkTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChunkTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChunkTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChunkTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ChunkTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/CodableTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CodableTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CodableTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CodableTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CodableTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/CompositeIDTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeIDTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeIDTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeIDTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeIDTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/CompositeRelationTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeRelationTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeRelationTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeRelationTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/CompositeRelationTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/EagerLoadTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EagerLoadTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EagerLoadTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EagerLoadTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EagerLoadTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/EnumTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EnumTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EnumTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EnumTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/EnumTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/FilterTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FilterTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FilterTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FilterTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/FilterTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/GroupTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GroupTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GroupTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GroupTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/GroupTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/IDTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/IDTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/IDTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/IDTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/IDTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/JoinTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/JoinTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/JoinTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/JoinTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/JoinTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/MiddlewareTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MiddlewareTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MiddlewareTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MiddlewareTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MiddlewareTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/MigratorTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MigratorTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MigratorTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MigratorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/MigratorTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/ModelTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ModelTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ModelTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ModelTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ModelTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/OptionalParentTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/OptionalParentTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/OptionalParentTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/OptionalParentTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/OptionalParentTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/PaginationTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PaginationTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PaginationTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PaginationTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PaginationTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/ParentTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ParentTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ParentTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ParentTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/ParentTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/PerformanceTests+Siblings.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests+Siblings.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests+Siblings.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests+Siblings~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests+Siblings.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/PerformanceTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/PerformanceTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/RangeTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/RangeTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/RangeTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/RangeTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/RangeTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/SQLTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SQLTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SQLTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SQLTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SQLTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/SchemaTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SchemaTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SchemaTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SchemaTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SchemaTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/SetTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SetTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SetTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SetTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SetTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/SiblingsTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SiblingsTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SiblingsTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SiblingsTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SiblingsTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/SoftDeleteTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SoftDeleteTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SoftDeleteTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SoftDeleteTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SoftDeleteTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/SortTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SortTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SortTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SortTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/SortTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/TimestampTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TimestampTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TimestampTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TimestampTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TimestampTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/TransactionTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TransactionTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TransactionTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TransactionTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/TransactionTests.swiftdeps"
+  },
+  "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/fluent-kit/Sources/FluentBenchmark/Tests/UniqueTests.swift": {
+    "dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/UniqueTests.d",
+    "object": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/UniqueTests.swift.o",
+    "swiftmodule": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/UniqueTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/FluentBenchmark.build/UniqueTests.swiftdeps"
+  }
+}

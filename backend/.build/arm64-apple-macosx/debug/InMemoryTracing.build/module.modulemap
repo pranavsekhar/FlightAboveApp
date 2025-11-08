@@ -1,0 +1,4 @@
+module InMemoryTracing {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/InMemoryTracing.build/InMemoryTracing-Swift.h"
+    requires objc
+}

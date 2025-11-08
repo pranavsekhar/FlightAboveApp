@@ -1,0 +1,4 @@
+module ConsoleKitCommands {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/ConsoleKitCommands.build/ConsoleKitCommands-Swift.h"
+    requires objc
+}

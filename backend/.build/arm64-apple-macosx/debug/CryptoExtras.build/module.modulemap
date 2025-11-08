@@ -1,0 +1,4 @@
+module CryptoExtras {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/CryptoExtras.build/CryptoExtras-Swift.h"
+    requires objc
+}

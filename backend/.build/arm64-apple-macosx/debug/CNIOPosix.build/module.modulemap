@@ -1,0 +1,4 @@
+module CNIOPosix {
+    umbrella header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/swift-nio/Sources/CNIOPosix/include/CNIOPosix.h"
+    export *
+}

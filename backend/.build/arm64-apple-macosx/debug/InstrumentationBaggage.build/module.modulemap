@@ -1,0 +1,4 @@
+module InstrumentationBaggage {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/InstrumentationBaggage.build/InstrumentationBaggage-Swift.h"
+    requires objc
+}

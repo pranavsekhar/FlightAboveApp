@@ -1,0 +1,4 @@
+module CNIOAtomics {
+    umbrella header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/checkouts/swift-nio/Sources/CNIOAtomics/include/CNIOAtomics.h"
+    export *
+}

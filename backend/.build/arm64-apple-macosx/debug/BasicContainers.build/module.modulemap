@@ -1,0 +1,4 @@
+module BasicContainers {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/BasicContainers.build/BasicContainers-Swift.h"
+    requires objc
+}

@@ -1,0 +1,4 @@
+module ConsoleKitTerminal {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/ConsoleKitTerminal.build/ConsoleKitTerminal-Swift.h"
+    requires objc
+}

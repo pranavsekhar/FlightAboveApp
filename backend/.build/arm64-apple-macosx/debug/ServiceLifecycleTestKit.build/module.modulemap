@@ -1,0 +1,4 @@
+module ServiceLifecycleTestKit {
+    header "/Users/pranavsekhar/dev/FlightAboveApp/backend/.build/arm64-apple-macosx/debug/ServiceLifecycleTestKit.build/ServiceLifecycleTestKit-Swift.h"
+    requires objc
+}

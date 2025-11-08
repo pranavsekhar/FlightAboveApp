@@ -6,14 +6,66 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		47034B982EBFCD93000DC482 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47034B972EBFCD93000DC482 /* WidgetKit.framework */; };
+		47034B9A2EBFCD93000DC482 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47034B992EBFCD93000DC482 /* SwiftUI.framework */; };
+		47034BA52EBFCD94000DC482 /* FlightAboveWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 47034B952EBFCD93000DC482 /* FlightAboveWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47034BA32EBFCD94000DC482 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47034B7B2EBEE740000DC482 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47034B942EBFCD93000DC482;
+			remoteInfo = FlightAboveWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47034BAA2EBFCD95000DC482 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				47034BA52EBFCD94000DC482 /* FlightAboveWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		47034B832EBEE740000DC482 /* FlightAboveApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightAboveApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47034B952EBFCD93000DC482 /* FlightAboveWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FlightAboveWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		47034B972EBFCD93000DC482 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		47034B992EBFCD93000DC482 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		47034BAC2EBFCE21000DC482 /* FlightAboveWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlightAboveWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		47034BA62EBFCD95000DC482 /* Exceptions for "FlightAboveWidget" folder in "FlightAboveWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 47034B942EBFCD93000DC482 /* FlightAboveWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		47034B852EBEE740000DC482 /* FlightAboveApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FlightAboveApp;
+			sourceTree = "<group>";
+		};
+		47034B9B2EBFCD93000DC482 /* FlightAboveWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				47034BA62EBFCD95000DC482 /* Exceptions for "FlightAboveWidget" folder in "FlightAboveWidgetExtension" target */,
+			);
+			path = FlightAboveWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +78,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47034B922EBFCD93000DC482 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47034B9A2EBFCD93000DC482 /* SwiftUI.framework in Frameworks */,
+				47034B982EBFCD93000DC482 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		47034B7A2EBEE740000DC482 = {
 			isa = PBXGroup;
 			children = (
+				47034BAC2EBFCE21000DC482 /* FlightAboveWidgetExtension.entitlements */,
 				47034B852EBEE740000DC482 /* FlightAboveApp */,
+				47034B9B2EBFCD93000DC482 /* FlightAboveWidget */,
+				47034B962EBFCD93000DC482 /* Frameworks */,
 				47034B842EBEE740000DC482 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +105,18 @@
 			isa = PBXGroup;
 			children = (
 				47034B832EBEE740000DC482 /* FlightAboveApp.app */,
+				47034B952EBFCD93000DC482 /* FlightAboveWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		47034B962EBFCD93000DC482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47034B972EBFCD93000DC482 /* WidgetKit.framework */,
+				47034B992EBFCD93000DC482 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +129,12 @@
 				47034B7F2EBEE740000DC482 /* Sources */,
 				47034B802EBEE740000DC482 /* Frameworks */,
 				47034B812EBEE740000DC482 /* Resources */,
+				47034BAA2EBFCD95000DC482 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				47034BA42EBFCD94000DC482 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				47034B852EBEE740000DC482 /* FlightAboveApp */,
@@ -69,6 +145,28 @@
 			productName = FlightAboveApp;
 			productReference = 47034B832EBEE740000DC482 /* FlightAboveApp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		47034B942EBFCD93000DC482 /* FlightAboveWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47034BA72EBFCD95000DC482 /* Build configuration list for PBXNativeTarget "FlightAboveWidgetExtension" */;
+			buildPhases = (
+				47034B912EBFCD93000DC482 /* Sources */,
+				47034B922EBFCD93000DC482 /* Frameworks */,
+				47034B932EBFCD93000DC482 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				47034B9B2EBFCD93000DC482 /* FlightAboveWidget */,
+			);
+			name = FlightAboveWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = FlightAboveWidgetExtension;
+			productReference = 47034B952EBFCD93000DC482 /* FlightAboveWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +179,9 @@
 				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					47034B822EBEE740000DC482 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					47034B942EBFCD93000DC482 = {
 						CreatedOnToolsVersion = 16.3;
 					};
 				};
@@ -100,12 +201,20 @@
 			projectRoot = "";
 			targets = (
 				47034B822EBEE740000DC482 /* FlightAboveApp */,
+				47034B942EBFCD93000DC482 /* FlightAboveWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		47034B812EBEE740000DC482 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47034B932EBFCD93000DC482 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		47034B912EBFCD93000DC482 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47034BA42EBFCD94000DC482 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47034B942EBFCD93000DC482 /* FlightAboveWidgetExtension */;
+			targetProxy = 47034BA32EBFCD94000DC482 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		47034B8C2EBEE741000DC482 /* Debug */ = {
@@ -178,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -236,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -251,11 +375,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlightAboveApp/FlightAboveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 59CB59T334;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Flight Above needs your location to show aircraft directly overhead.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -279,11 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlightAboveApp/FlightAboveApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 59CB59T334;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Flight Above needs your location to show aircraft directly overhead.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +424,62 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flightabove.FlightAboveApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		47034BA82EBFCD95000DC482 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FlightAboveWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59CB59T334;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightAboveWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlightAboveWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flightabove.FlightAboveApp.FlightAboveWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47034BA92EBFCD95000DC482 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FlightAboveWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59CB59T334;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlightAboveWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlightAboveWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flightabove.FlightAboveApp.FlightAboveWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,6 +503,15 @@
 			buildConfigurations = (
 				47034B8F2EBEE741000DC482 /* Debug */,
 				47034B902EBEE741000DC482 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47034BA72EBFCD95000DC482 /* Build configuration list for PBXNativeTarget "FlightAboveWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47034BA82EBFCD95000DC482 /* Debug */,
+				47034BA92EBFCD95000DC482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
