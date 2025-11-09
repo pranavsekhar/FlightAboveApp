@@ -64,11 +64,30 @@ public class OpenSkyClient {
         let bodyString = "grant_type=client_credentials&client_id=\(clientId)&client_secret=\(clientSecret)"
         tokenRequest.body = .init(string: bodyString)
         
-        let body = try await client.send(tokenRequest)
+        let body: ClientResponse
+        do {
+            body = try await client.send(tokenRequest)
+        } catch {
+            logger.error("OpenSky token request network error: \(error)")
+            throw Abort(.internalServerError, reason: "Network error while obtaining OpenSky token: \(error.localizedDescription)")
+        }
         
         guard body.status == .ok else {
-            logger.error("OpenSky token request failed: \(body.status)")
-            throw Abort(.internalServerError, reason: "Failed to obtain OpenSky token")
+            // Try to read error response body
+            var errorMessage = "Status: \(body.status)"
+            if let bodyBuffer = body.body {
+                do {
+                    if let bodyData = bodyBuffer.getData(at: 0, length: bodyBuffer.readableBytes) {
+                        if let errorString = String(data: bodyData, encoding: .utf8) {
+                            errorMessage += ", Response: \(errorString)"
+                        }
+                    }
+                } catch {
+                    // Ignore body read errors
+                }
+            }
+            logger.error("OpenSky token request failed: \(errorMessage)")
+            throw Abort(.internalServerError, reason: "Failed to obtain OpenSky token: \(errorMessage)")
         }
         
         let tokenResponse = try body.content.decode(TokenResponse.self)
@@ -89,27 +108,72 @@ public class OpenSkyClient {
         let token = try await getAccessToken()
         
         let url = "\(baseURL)/api/states/all?lamin=\(latMin)&lamax=\(latMax)&lomin=\(lonMin)&lomax=\(lonMax)"
+        logger.info("Fetching OpenSky states from: \(url)")
         
         var request = ClientRequest(method: .GET, url: URI(string: url))
         request.headers.bearerAuthorization = BearerAuthorization(token: token)
-        let response = try await client.send(request)
+        request.headers.add(name: "User-Agent", value: "FlightAbove/1.0")
+        
+        let response: ClientResponse
+        do {
+            response = try await client.send(request)
+        } catch {
+            logger.error("OpenSky states request network error: \(error)")
+            throw Abort(.internalServerError, reason: "Network error while fetching OpenSky states: \(error.localizedDescription)")
+        }
         
         guard response.status == .ok else {
+            // Try to read error response body
+            var errorMessage = "Status: \(response.status)"
+            if let bodyBuffer = response.body {
+                do {
+                    if let bodyData = bodyBuffer.getData(at: 0, length: bodyBuffer.readableBytes) {
+                        if let errorString = String(data: bodyData, encoding: .utf8) {
+                            errorMessage += ", Response: \(errorString.prefix(500))" // Limit to 500 chars
+                        }
+                    }
+                } catch {
+                    // Ignore body read errors
+                }
+            }
+            
             if response.status == .unauthorized {
                 // Try refreshing token once
+                logger.warning("OpenSky request unauthorized, refreshing token")
                 cache.remove("token")
                 let newToken = try await getAccessToken()
                 var retryRequest = ClientRequest(method: .GET, url: URI(string: url))
                 retryRequest.headers.bearerAuthorization = BearerAuthorization(token: newToken)
-                let retryResponse = try await client.send(retryRequest)
+                retryRequest.headers.add(name: "User-Agent", value: "FlightAbove/1.0")
+                
+                let retryResponse: ClientResponse
+                do {
+                    retryResponse = try await client.send(retryRequest)
+                } catch {
+                    logger.error("OpenSky retry request network error: \(error)")
+                    throw Abort(.internalServerError, reason: "Network error on retry: \(error.localizedDescription)")
+                }
+                
                 guard retryResponse.status == .ok else {
-                    logger.error("OpenSky request failed after token refresh: \(retryResponse.status)")
-                    throw Abort(.internalServerError, reason: "OpenSky API request failed")
+                    var retryErrorMessage = "Status: \(retryResponse.status)"
+                    if let bodyBuffer = retryResponse.body {
+                        do {
+                            if let bodyData = bodyBuffer.getData(at: 0, length: bodyBuffer.readableBytes) {
+                                if let errorString = String(data: bodyData, encoding: .utf8) {
+                                    retryErrorMessage += ", Response: \(errorString.prefix(500))"
+                                }
+                            }
+                        } catch {
+                            // Ignore body read errors
+                        }
+                    }
+                    logger.error("OpenSky request failed after token refresh: \(retryErrorMessage)")
+                    throw Abort(.internalServerError, reason: "OpenSky API request failed after token refresh: \(retryErrorMessage)")
                 }
                 return try parseStatesResponse(retryResponse)
             }
-            logger.error("OpenSky request failed: \(response.status)")
-            throw Abort(.internalServerError, reason: "OpenSky API request failed")
+            logger.error("OpenSky request failed: \(errorMessage)")
+            throw Abort(.internalServerError, reason: "OpenSky API request failed: \(errorMessage)")
         }
         
         return try parseStatesResponse(response)
@@ -121,16 +185,27 @@ public class OpenSkyClient {
         }
         
         // Parse JSON manually to handle array format
-        guard let bodyBuffer = response.body,
-              let body = try bodyBuffer.getData(at: 0, length: bodyBuffer.readableBytes) else {
+        guard let bodyBuffer = response.body else {
+            logger.warning("OpenSky response has no body")
             return []
         }
         
-        let json = try JSONSerialization.jsonObject(with: body) as? [String: Any]
-        
-        guard let statesArray = json?["states"] as? [[Any]] else {
+        guard let body = bodyBuffer.getData(at: 0, length: bodyBuffer.readableBytes) else {
+            logger.warning("OpenSky response body could not be read")
             return []
         }
+        
+        guard let json = try JSONSerialization.jsonObject(with: body) as? [String: Any] else {
+            logger.warning("OpenSky response is not a JSON object")
+            return []
+        }
+        
+        guard let statesArray = json["states"] as? [[Any]] else {
+            logger.info("OpenSky response has no states array (or states is null)")
+            return []
+        }
+        
+        logger.info("OpenSky returned \(statesArray.count) state vectors")
         
         var stateVectors: [StateVector] = []
         for stateArray in statesArray {
@@ -139,6 +214,7 @@ public class OpenSkyClient {
             }
         }
         
+        logger.info("Parsed \(stateVectors.count) valid state vectors")
         return stateVectors
     }
 }
@@ -192,4 +268,3 @@ private struct AnyCodable: Codable {
         }
     }
 }
-

@@ -14,12 +14,12 @@ public struct AboveResponse: Content {
         case errors
     }
     
-    public struct Center: Codable {
+    public struct Center: Codable, Sendable {
         public let lat: Double
         public let lon: Double
     }
     
-    public struct Aircraft: Codable, Identifiable {
+    public struct Aircraft: Codable, Identifiable, Sendable {
         public var id: String {
             icao24 + (callsign ?? "")
         }

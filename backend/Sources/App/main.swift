@@ -6,7 +6,7 @@ try LoggingSystem.bootstrap(from: &env)
 let app = try await Application.make(env)
 defer { 
     Task {
-        await app.shutdown()
+        app.shutdown()
     }
 }
 

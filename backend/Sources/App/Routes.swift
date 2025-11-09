@@ -14,7 +14,7 @@ extension Array {
 private let DEFAULT_RADIUS_KM = 60.0
 private let MIN_RADIUS_KM = 10.0
 private let MAX_RADIUS_KM = 120.0
-private let ELEV_THRESHOLD_DEG = 70.0
+private let ELEV_THRESHOLD_DEG = 5.0  // Minimum elevation angle in degrees (5° = visible above horizon)
 private let RESULTS_LIMIT = 6
 private let MAX_ENRICH_CONCURRENCY = 3
 
@@ -27,7 +27,6 @@ func routes(_ app: Application) throws {
     }
     
     let lookupCDNBase = Environment.get("LOOKUP_CDN_BASE")
-    let port = Environment.get("PORT").flatMap { Int($0) } ?? 8080
     
     // Initialize clients
     let openSkyClient = OpenSkyClient(
@@ -56,7 +55,12 @@ func routes(_ app: Application) throws {
             throw Abort(.badRequest, reason: "Missing required parameters: lat, lon")
         }
         
-        var radiusKm = try req.query.get(Double.self, at: "radius_km") ?? DEFAULT_RADIUS_KM
+        var radiusKm: Double
+        if let radius = try? req.query.get(Double.self, at: "radius_km") {
+            radiusKm = radius
+        } else {
+            radiusKm = DEFAULT_RADIUS_KM
+        }
         radiusKm = max(MIN_RADIUS_KM, min(MAX_RADIUS_KM, radiusKm))
         
         // Round coordinates for logging (privacy)
@@ -79,6 +83,7 @@ func routes(_ app: Application) throws {
                 lonMin: bbox.lonMin,
                 lonMax: bbox.lonMax
             )
+            req.logger.info("Fetched \(stateVectors.count) state vectors from OpenSky")
         } catch {
             req.logger.error("OpenSky fetch failed: \(error)")
             errors.append("opensky_fetch_failed")
@@ -99,17 +104,22 @@ func routes(_ app: Application) throws {
         }
         
         var processed: [ProcessedAircraft] = []
+        var skippedNoPosition = 0
+        var skippedRadius = 0
+        var skippedElevation = 0
         
         for sv in stateVectors {
             guard let svLat = sv.lat,
                   let svLon = sv.lon,
                   let geoAlt = sv.geoAltitude else {
+                skippedNoPosition += 1
                 continue
             }
             
             // Filter by radius
             let distanceKm = Geo.haversineKm(lat1: lat, lon1: lon, lat2: svLat, lon2: svLon)
             if distanceKm > radiusKm {
+                skippedRadius += 1
                 continue
             }
             
@@ -129,8 +139,12 @@ func routes(_ app: Application) throws {
                     bearingDeg: bearingDeg,
                     elevDeg: elevDeg
                 ))
+            } else {
+                skippedElevation += 1
             }
         }
+        
+        req.logger.info("Filtered aircraft: \(processed.count) passed, \(skippedNoPosition) no position, \(skippedRadius) outside radius, \(skippedElevation) below elevation threshold")
         
         // Sort by elevation descending and take top N
         processed.sort { $0.elevDeg > $1.elevDeg }
