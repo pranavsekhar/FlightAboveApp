@@ -52,24 +52,59 @@ public class OpenSkyClient {
         if let cached = cache.get("token") {
             let skewSeconds: TimeInterval = 60
             if cached.expiresAt > Date().addingTimeInterval(skewSeconds) {
-                logger.info("Using cached OpenSky token")
+                logger.info("Using cached OpenSky token (expires at \(cached.expiresAt))")
                 return cached.accessToken
+            } else {
+                logger.info("Cached token expired, fetching new one")
             }
+        } else {
+            logger.info("No cached token found, fetching new one")
         }
         
-        // Request new token
-        logger.info("Fetching new OpenSky token")
+        // Request new token with retry logic for connection timeouts
+        logger.info("Fetching new OpenSky token from \(tokenURL)")
+        let tokenFetchStart = Date()
         var tokenRequest = ClientRequest(method: .POST, url: URI(string: tokenURL))
         tokenRequest.headers.contentType = .urlEncodedForm
         let bodyString = "grant_type=client_credentials&client_id=\(clientId)&client_secret=\(clientSecret)"
         tokenRequest.body = .init(string: bodyString)
         
-        let body: ClientResponse
-        do {
-            body = try await client.send(tokenRequest)
-        } catch {
-            logger.error("OpenSky token request network error: \(error)")
-            throw Abort(.internalServerError, reason: "Network error while obtaining OpenSky token: \(error.localizedDescription)")
+        let maxRetries = 2
+        var lastError: Error?
+        var response: ClientResponse?
+        
+        for attempt in 0...maxRetries {
+            do {
+                response = try await client.send(tokenRequest)
+                let tokenFetchDuration = Date().timeIntervalSince(tokenFetchStart)
+                logger.info("OpenSky token fetched successfully in \(String(format: "%.2f", tokenFetchDuration))s")
+                lastError = nil
+                break
+            } catch {
+                lastError = error
+                let errorString = String(describing: error)
+                
+                // Check if it's a connection timeout error
+                if errorString.contains("connectTimeout") || errorString.contains("HTTPClientError") {
+                    if attempt < maxRetries {
+                        let delaySeconds = Double(attempt + 1) * 2.0  // 2s, 4s delays
+                        logger.warning("OpenSky token request timeout (attempt \(attempt + 1)/\(maxRetries + 1)), retrying in \(delaySeconds)s...")
+                        try await Task.sleep(nanoseconds: UInt64(delaySeconds * 1_000_000_000))
+                        continue
+                    }
+                }
+                
+                // For non-timeout errors or final attempt, throw immediately
+                logger.error("OpenSky token request network error: \(error)")
+                throw Abort(.internalServerError, reason: "Network error while obtaining OpenSky token: \(error.localizedDescription)")
+            }
+        }
+        
+        // If we still have an error after retries, throw it
+        guard let body = response else {
+            let errorMsg = lastError?.localizedDescription ?? "Unknown error"
+            logger.error("OpenSky token request failed after \(maxRetries + 1) attempts: \(errorMsg)")
+            throw Abort(.internalServerError, reason: "Network error while obtaining OpenSky token: \(errorMsg)")
         }
         
         guard body.status == .ok else {
