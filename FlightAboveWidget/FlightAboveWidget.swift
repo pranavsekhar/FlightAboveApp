@@ -1,16 +1,18 @@
 import WidgetKit
 import SwiftUI
 import CoreLocation
+import AppIntents
 
 struct FlightAboveWidget: Widget {
     let kind: String = "FlightAboveWidget"
     
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: FlightTimelineProvider()) { entry in
+        AppIntentConfiguration(kind: kind, intent: FlightNavigationIntent.self, provider: FlightTimelineProvider()) { entry in
             FlightAboveWidgetEntryView(entry: entry)
+                .containerBackground(.black, for: .widget)
         }
         .configurationDisplayName("Flight Above")
-        .description("Shows aircraft directly overhead")
+        .description("Shows aircraft directly overhead. Swipe up/down to navigate.")
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
@@ -18,49 +20,176 @@ struct FlightAboveWidget: Widget {
 struct FlightAboveWidgetEntryView: View {
     var entry: FlightEntry
     
+    @AppStorage("currentFlightIndex", store: UserDefaults(suiteName: "group.com.flightabove.app")) 
+    private var currentFlightIndex: Int = 0
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        ZStack {
+            // LED wall background - dark
+            Color.black
+                .ignoresSafeArea()
+            
             if entry.aircraft.isEmpty {
                 VStack {
-                    Text("No flights directly overhead")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                    LEDText(text: "NO FLIGHTS OVERHEAD")
+                        .font(.system(size: 11, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.6))
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
-                ForEach(Array(entry.aircraft.prefix(3))) { aircraft in
-                    VStack(alignment: .leading, spacing: 2) {
-                        // Title: Airline or "Flight" · CALLSIGN
-                        HStack {
-                            Text(aircraft.airline ?? "Flight")
-                                .font(.headline)
-                                .lineLimit(1)
-                            Text("·")
-                                .foregroundColor(.secondary)
-                            Text(aircraft.callsign ?? "N/A")
-                                .font(.headline)
-                                .lineLimit(1)
-                        }
+                // Show only one flight at a time
+                // Wrap index if out of bounds (handle negative indices)
+                let count = entry.aircraft.count
+                let wrappedIndex = ((currentFlightIndex % count) + count) % count
+                let aircraft = entry.aircraft[wrappedIndex]
+                
+                LEDSingleFlightView(
+                    aircraft: aircraft, 
+                    currentIndex: wrappedIndex + 1, 
+                    totalCount: entry.aircraft.count
+                )
+                .padding(.horizontal, 16)
+                .padding(.vertical, 12)
+            }
+        }
+    }
+}
+
+struct LEDSingleFlightView: View {
+    let aircraft: AboveResponse.Aircraft
+    let currentIndex: Int
+    let totalCount: Int
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            // Route (IATA codes) - top line, most prominent
+            if let origin = aircraft.originIata ?? aircraft.originIcao,
+               let dest = aircraft.destinationIata ?? aircraft.destinationIcao {
+                LEDText(text: "\(origin) > \(dest)")
+                    .font(.system(size: 13, weight: .bold, design: .monospaced))
+                    .foregroundColor(.white)
+            }
+            
+            // Aircraft model (full name preferred, fallback to short)
+            if let aircraftModel = aircraft.aircraftNameFull ?? aircraft.aircraftNameShort ?? aircraft.aircraftType {
+                LEDText(text: aircraftModel.uppercased())
+                    .font(.system(size: 11, weight: .semibold, design: .monospaced))
+                    .foregroundColor(.white.opacity(0.9))
+            }
+            
+            // Airline name and flight number
+            HStack(spacing: 4) {
+                LEDText(text: aircraft.airline?.uppercased() ?? "FLIGHT")
+                    .font(.system(size: 10, weight: .medium, design: .monospaced))
+                    .foregroundColor(.white.opacity(0.9))
+                
+                if let callsign = aircraft.callsign {
+                    LEDText(text: callsign.uppercased())
+                        .font(.system(size: 10, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.9))
+                }
+            }
+            
+            Spacer()
+            
+            // Airport names at bottom (matching LED wall screenshot)
+            if let originName = aircraft.originName {
+                LEDText(text: originName.uppercased())
+                    .font(.system(size: 9, weight: .medium, design: .monospaced))
+                    .foregroundColor(.white.opacity(0.7))
+            }
+            
+            if let destName = aircraft.destinationName {
+                LEDText(text: destName.uppercased())
+                    .font(.system(size: 9, weight: .medium, design: .monospaced))
+                    .foregroundColor(.white.opacity(0.7))
+            }
+            
+            // Stats row - bottom
+            HStack(spacing: 12) {
+                if let speed = aircraft.gsKt {
+                    LEDText(text: "SPD \(Int(speed)) KT")
+                        .font(.system(size: 9, weight: .medium, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.7))
+                }
+                
+                if let alt = aircraft.altFt {
+                    LEDText(text: "ALT \(Int(alt)) FT")
+                        .font(.system(size: 9, weight: .medium, design: .monospaced))
+                        .foregroundColor(.white.opacity(0.7))
+                }
+            }
+            
+            // Flight counter and navigation hints (subtle, bottom right)
+            if totalCount > 1 {
+                HStack {
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 2) {
+                        LEDText(text: "\(currentIndex)/\(totalCount)")
+                            .font(.system(size: 8, weight: .regular, design: .monospaced))
+                            .foregroundColor(.white.opacity(0.4))
                         
-                        // Subtitle: aircraft_name_short or aircraft_type origin→destination
-                        HStack {
-                            Text(aircraft.aircraftNameShort ?? aircraft.aircraftType ?? "Unknown")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                            
-                            if let origin = aircraft.originIcao,
-                               let dest = aircraft.destinationIcao {
-                                Text("\(origin)→\(dest)")
-                                    .font(.caption)
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                        .lineLimit(1)
+                        // Navigation hint
+                        LEDText(text: "SWIPE ↑↓")
+                            .font(.system(size: 7, weight: .regular, design: .monospaced))
+                            .foregroundColor(.white.opacity(0.3))
                     }
                 }
             }
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    }
+}
+
+// Custom view to create pixelated LED effect
+struct LEDText: View {
+    let text: String
+    var font: Font = .system(size: 12, weight: .bold, design: .monospaced)
+    var foregroundColor: Color = .white
+    
+    var body: some View {
+        Text(text)
+            .font(font)
+            .foregroundColor(foregroundColor)
+            .tracking(0.5) // Slight letter spacing for LED look
+            .shadow(color: foregroundColor.opacity(0.3), radius: 1, x: 0, y: 0) // Subtle glow
+            .lineLimit(1)
+            .minimumScaleFactor(0.8) // Prevent text from being cut off
+    }
+}
+
+// App Intent for widget configuration (required for AppIntentConfiguration)
+struct FlightNavigationIntent: WidgetConfigurationIntent {
+    static var title: LocalizedStringResource = "Flight Above"
+    static var description = IntentDescription("Shows aircraft directly overhead")
+}
+
+// App Intents for widget interactive buttons
+struct NextFlightIntent: AppIntent {
+    static var title: LocalizedStringResource = "Next Flight"
+    static var openAppWhenRun: Bool = false
+    
+    func perform() async throws -> some IntentResult {
+        let sharedDefaults = UserDefaults(suiteName: "group.com.flightabove.app")
+        let currentIndex = sharedDefaults?.integer(forKey: "currentFlightIndex") ?? 0
+        // Don't wrap here - let the view handle wrapping
+        sharedDefaults?.set(currentIndex + 1, forKey: "currentFlightIndex")
+        WidgetCenter.shared.reloadTimelines(ofKind: "FlightAboveWidget")
+        return .result()
+    }
+}
+
+struct PreviousFlightIntent: AppIntent {
+    static var title: LocalizedStringResource = "Previous Flight"
+    static var openAppWhenRun: Bool = false
+    
+    func perform() async throws -> some IntentResult {
+        let sharedDefaults = UserDefaults(suiteName: "group.com.flightabove.app")
+        let currentIndex = sharedDefaults?.integer(forKey: "currentFlightIndex") ?? 0
+        // Decrement - the view will handle wrapping
+        sharedDefaults?.set(currentIndex - 1, forKey: "currentFlightIndex")
+        WidgetCenter.shared.reloadTimelines(ofKind: "FlightAboveWidget")
+        return .result()
     }
 }
 
@@ -70,8 +199,9 @@ struct FlightEntry: TimelineEntry {
     let error: String?
 }
 
-struct FlightTimelineProvider: TimelineProvider {
+struct FlightTimelineProvider: AppIntentTimelineProvider {
     typealias Entry = FlightEntry
+    typealias Intent = FlightNavigationIntent
     
     func placeholder(in context: Context) -> Entry {
         FlightEntry(
@@ -81,16 +211,15 @@ struct FlightTimelineProvider: TimelineProvider {
         )
     }
     
-    func getSnapshot(in context: Context, completion: @escaping (Entry) -> Void) {
-        let entry = FlightEntry(
+    func snapshot(for configuration: FlightNavigationIntent, in context: Context) async -> Entry {
+        FlightEntry(
             date: Date(),
             aircraft: [],
             error: nil
         )
-        completion(entry)
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> Void) {
+    func timeline(for configuration: FlightNavigationIntent, in context: Context) async -> Timeline<Entry> {
         let settings = SettingsManager()
         let backendURL = settings.backendURL
         let radiusKm = settings.radiusKm
@@ -113,21 +242,21 @@ struct FlightTimelineProvider: TimelineProvider {
                 aircraft: [],
                 error: "Invalid URL"
             )
-            let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(300)))
-            completion(timeline)
-            return
+            return Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(300)))
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        do {
+            let (data, response) = try await URLSession.shared.data(from: url)
+            
             var entry: Entry
             
-            if let error = error {
+            if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
                 entry = FlightEntry(
                     date: Date(),
                     aircraft: [],
-                    error: error.localizedDescription
+                    error: "HTTP \(httpResponse.statusCode)"
                 )
-            } else if let data = data {
+            } else {
                 do {
                     let response = try JSONDecoder().decode(AboveResponse.self, from: data)
                     entry = FlightEntry(
@@ -142,19 +271,21 @@ struct FlightTimelineProvider: TimelineProvider {
                         error: "Parse error: \(error.localizedDescription)"
                     )
                 }
-            } else {
-                entry = FlightEntry(
-                    date: Date(),
-                    aircraft: [],
-                    error: "No data"
-                )
             }
             
             // Refresh every 30 minutes
             let nextUpdate = Date().addingTimeInterval(30 * 60)
-            let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
-            completion(timeline)
-        }.resume()
+            return Timeline(entries: [entry], policy: .after(nextUpdate))
+        } catch {
+            let entry = FlightEntry(
+                date: Date(),
+                aircraft: [],
+                error: error.localizedDescription
+            )
+            // Refresh every 5 minutes on error
+            let nextUpdate = Date().addingTimeInterval(5 * 60)
+            return Timeline(entries: [entry], policy: .after(nextUpdate))
+        }
     }
 }
 

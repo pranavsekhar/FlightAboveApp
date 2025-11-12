@@ -32,9 +32,14 @@ public struct AboveResponse: Decodable {
         public let elevDeg: Double?
         public let airline: String?
         public let originIcao: String?
+        public let originIata: String?
+        public let originName: String?
         public let destinationIcao: String?
+        public let destinationIata: String?
+        public let destinationName: String?
         public let aircraftType: String?
         public let aircraftNameShort: String?
+        public let aircraftNameFull: String?
         
         enum CodingKeys: String, CodingKey {
             case icao24
@@ -46,9 +51,14 @@ public struct AboveResponse: Decodable {
             case elevDeg = "elev_deg"
             case airline
             case originIcao = "origin_icao"
+            case originIata = "origin_iata"
+            case originName = "origin_name"
             case destinationIcao = "destination_icao"
+            case destinationIata = "destination_iata"
+            case destinationName = "destination_name"
             case aircraftType = "aircraft_type"
             case aircraftNameShort = "aircraft_name_short"
+            case aircraftNameFull = "aircraft_name_full"
         }
     }
 }
